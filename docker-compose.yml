@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  techjobspersistent:
+    image: ${DOCKER_REGISTRY-}techjobspersistent
+    build:
+      context: .
+      dockerfile: TechJobsPersistent/Dockerfile
