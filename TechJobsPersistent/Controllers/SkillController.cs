@@ -72,7 +72,7 @@ namespace TechJobsPersistent.Controllers
 
                 if (existingItems.Count == 0)
                 {
-                    JobSkill jobSkill = new JobSkill//EventsTag anaolg video 6.3
+                    JobSkill jobSkill = new JobSkill
                     {
                         JobId = jobId,
                         SkillId = skillId
