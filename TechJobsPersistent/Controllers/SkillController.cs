@@ -9,6 +9,7 @@ using TechJobsPersistent.Models;
 using TechJobsPersistent.ViewModels;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+//***TagController analog***
 
 namespace TechJobsPersistent.Controllers
 {
@@ -56,7 +57,7 @@ namespace TechJobsPersistent.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddJob(AddJobSkillViewModel viewModel)
+        public IActionResult AddJob(AddJobSkillViewModel viewModel)//AddEvent(viewModel) analog
         {
             if (ModelState.IsValid)
             {
@@ -71,7 +72,7 @@ namespace TechJobsPersistent.Controllers
 
                 if (existingItems.Count == 0)
                 {
-                    JobSkill jobSkill = new JobSkill
+                    JobSkill jobSkill = new JobSkill//EventsTag anaolg video 6.3
                     {
                         JobId = jobId,
                         SkillId = skillId

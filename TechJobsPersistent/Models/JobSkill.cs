@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Join object//
+
+using System;
 namespace TechJobsPersistent.Models
 {
     public class JobSkill
