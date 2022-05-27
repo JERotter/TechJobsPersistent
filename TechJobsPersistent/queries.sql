@@ -15,7 +15,8 @@ WHERE (Location = "St. Louis");
 
 --Part 3
 
-SELECT techjobs.Skills.Name, techjobs.Skills.Description
+SELECT DISTINCT techjobs.Skills.Name, techjobs.Skills.Description
 FROM techjobs.Skills
-JOIN techjobs.JobSkills ON techjobs.Skill.Id = techjobs.JobSkills.SkillId
+JOIN techjobs.JobSkills ON techjobs.Skills.Id = techjobs.JobSkills.SkillId
+WHERE techjobs.JobSkills.JobId is not null
 ORDER BY Name;
