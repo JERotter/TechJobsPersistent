@@ -44,7 +44,6 @@ namespace TechJobsPersistent.Controllers
             if (ModelState.IsValid)
             {
                 int jobId = addJobskillViewModel.JobId;
-                //int skillId = addJobskillViewModel.SkillId;
                 Employer employer = context.Employers.Find(addJobViewModel.EmployerId);
 
                 Job newJob = new Job
@@ -79,6 +78,7 @@ namespace TechJobsPersistent.Controllers
             List<Skill> skills = context.Skills.ToList();
             List<Employer> employers = context.Employers.ToList();
             AddJobViewModel viewModel = new AddJobViewModel(employers, skills);
+            ViewBag.skills = context.Skills.ToList();
             return View("AddJob", viewModel);
         }
 
